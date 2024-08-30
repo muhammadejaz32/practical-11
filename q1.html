@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        div{
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            margin-top: 20%;
+        }
+        button{
+            padding: 0.5% 2% 0.5% 2%;
+            background-color: rgb(rgb(73, 42, 42), rgb(53, 163, 53), rgb(70, 70, 85));
+            color:black;
+        }
+        span{
+            font-size: 30px;
+        }
+        h1{
+            text-transform: uppercase;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+        <h1>counter app </h1>
+      <span id="like-counter">0</span>
+      <button id="like-button" onclick="count1()">counter</button>
+    </div>
+
+    <!-- script -->
+    <script>
+      var likebtn = document.getElementById("like-button");
+      var likecounter = document.getElementById("like-counter");
+      var count = 0;
+
+      function count1() {
+        count++;
+        likecounter.innerHTML = count;
+      }
+    </script>
+  </body>
+</html>

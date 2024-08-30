@@ -1,0 +1,35 @@
+<!-- form send email -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div action="">
+        <label for="">name</label>
+        <input type="text" id="name"><br>
+        <label for="">email</label>
+        <input type="email" id="email"> <br>
+        <button type="" id="submit" onclick="mm()">submit</button>
+        <h1 id="h1"></h1>
+    </div>
+
+    <script>
+        let email1 = document.getElementById('email');
+        function mm(){
+            let name = document.getElementById('h1');
+
+            name.innerHTML = `your email is ${email1.value}`;
+        }
+        /*function submission(){
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        //let messagebox  = document.getElementById('messagebox');
+        //messagebox.value = email;
+        alert(`email is`);
+        }*/
+    </script>
+</body>
+</html>

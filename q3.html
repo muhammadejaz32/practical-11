@@ -1,0 +1,38 @@
+<!-- tooltip question -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        #tooltip{
+            position: absolute;
+            background-color: lightblue;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./FB_IMG_17131840698660928(1).jpg" alt="" id="product-image" width="300px" onmouseenter="tooltips()">
+        <div id="tooltip">
+            <p>product name: image</p>
+            <p>price : 20000</p>
+            <p>description:this is a product description</p>
+        </div>
+    </div>
+    <script>
+        var tooltip = document.getElementById('product-image');
+
+        function tooltips(){
+            tooltip.style.display='block';
+        }
+    </script>
+</body>
+</html>

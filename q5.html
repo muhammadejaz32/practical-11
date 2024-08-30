@@ -1,0 +1,61 @@
+<!-- form validation -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="">
+        <input type="text" placeholder="name" id="name" onkeyup="validatename()">
+        <span class="error-message" id="name-error"></span>
+
+        <br>
+        <input type="email" placeholder="email" id="email" onkeyup="validateemail()">
+        <span class="error-messsage" id="email-error"></span>
+
+        <br>
+        <input type="password" placeholder="password" id="passsword" onkey="passwordvalidation()">
+        <span class="error-message" id="password-errod"></span>
+    </form>
+
+    <script>
+        var name1 = document.getElementById('name');
+        var email1 = document.getElementById('email')
+        var passsword1 = document.getElementById('password') ;
+        var nameerror = document.getElementById('name-error');
+        var emailerror = document.getElementById('email-error');        
+        var passworderror = document.getElementById('password-error');
+
+        function validatename(){
+            var name2 = name1.value.trim();
+            if(name2.length<2){
+                nameerror.textContent = "name should be at least two character"
+            }
+            else{
+                nameerror.textContent = "";
+            }
+        }
+        function validateemail(){
+            var email2 = email1.value.trim();
+            if(!email2.includes('@')){
+                emailerror.textContent = 'invalid email';
+            }
+            else{
+                emailerror.textContent = "";
+            }
+        }
+        function passwordvalidation(){
+            var passsword12 = passsword1.value.trim();
+            if(passsword12.length < 10){
+                passworderror.textContent = "password must be at least 10 charcater";
+            }
+            else{
+                passworderror.textContent = "";
+            }
+        }
+
+    </script>
+ </body>
+ </html>
